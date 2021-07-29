@@ -1,9 +1,9 @@
 const state = () => ({
   players: [
-    {id: 1, name: "Player 1b", word: "Apple", isImposter: false}, 
-    {id: 2, name: "Player 2b", word: "Cherry", isImposter: false}, 
-    {id: 3, name: "Player 3b", word: "Apple", isImposter: false},
-    {id: 4, name: "Player 4b", word: "Apple", isImposter: false},
+    {id: 1, name: "Player 1b", word: "Apple", isImposter: false, alive: true}, 
+    {id: 2, name: "Player 2b", word: "Cherry", isImposter: false, alive: true}, 
+    {id: 3, name: "Player 3b", word: "Apple", isImposter: false, alive: true},
+    {id: 4, name: "Player 4b", word: "Apple", isImposter: false, alive: true},
   ],
   nextPlayer: 5,
   wordbank: [
@@ -47,7 +47,11 @@ const mutations = {
     const imposterIndex = Math.floor(Math.random() * state.players.length)
     state.players[imposterIndex].word = randomWords[1];
     state.players[imposterIndex].isImposter = true;
-  }
+  },
+  // selectRandomName: function (state) {
+  //   const randomIndex = Math.floor(Math.random() * state.players.length)
+  //   return state.players[randomIndex].name;
+  // }
 }
 
 export default {

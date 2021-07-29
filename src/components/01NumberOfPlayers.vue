@@ -24,11 +24,6 @@ export default {
   }),
   methods: {
     ...mapMutations(['addPlayer', 'removePlayer']),
-    // changeName: function (changeid, newName) {
-    //   console.log(newName);
-    //   const actualId = changeid - 1;
-    //   this.players[actualId].name = newName;
-    // }
   }
 }
 </script>

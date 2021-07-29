@@ -8,8 +8,23 @@
 </template>
 
 <script>
-export default {
+// import {mapMutations} from 'vuex';
 
+export default {
+  // data: function() {
+  //   return {
+  //     randomPlayer: "Anyone"
+  //     };
+  // },
+  // methods: {
+  //   ...mapMutations(["selectRandomName"])
+  // },
+  // mounted:
+  //   function () {
+  //     this.randomPlayer = this.selectRandomName();
+  //     console.log(this.selectRandomName());
+  //     console.log(this.randomPlayer)
+  //   },
 }
 </script>
 
