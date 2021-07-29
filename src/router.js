@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Router from "vue-router";
+import VueRouter from "vue-router";
 import NumberOfPlayers from "./components/01NumberOfPlayers";
 import NamesOfPlayers from "./components/02NamesOfPlayers";
 import Words from "./components/03Words";
@@ -8,13 +8,13 @@ import Voting from "./components/05Voting";
 import GameContinues from "./components/06GameContinues";
 import GameEnds from "./components/07GameEnds";
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
 export const routes = [
   {
     path: "/numberofplayers",
     name: "Number Of Players",
-    component: NumberOfPlayers,
+    component:NumberOfPlayers,
   },
   {
     path: "/namesofplayers",
@@ -48,7 +48,8 @@ export const routes = [
   },
 ]
 
-export const router = new Router({
+export const router = new VueRouter({
+  mode: "history",
   routes
 });
 
