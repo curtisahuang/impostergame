@@ -1,19 +1,16 @@
+import router from "../../router";
+import wordbank from "./wordbank"
+
 const state = () => ({
   players: [
-    {id: 1, name: "Player 1b", word: "Apple", isImposter: false, alive: true}, 
-    {id: 2, name: "Player 2b", word: "Cherry", isImposter: false, alive: true}, 
-    {id: 3, name: "Player 3b", word: "Apple", isImposter: false, alive: true},
-    {id: 4, name: "Player 4b", word: "Apple", isImposter: false, alive: true},
+    {id: 1, name: "Player 1", word: null, isImposter: false, isAlive: true}, 
+    {id: 2, name: "Player 2", word: null, isImposter: false, isAlive: true}, 
+    {id: 3, name: "Player 3", word: null, isImposter: false, isAlive: true},
+    {id: 4, name: "Player 4", word: null, isImposter: false, isAlive: true},
   ],
   nextPlayer: 5,
-  wordbank: [
-    ["7-11", "Lawson's", "Family Mart"],
-    ["sprite", "vodka", "ginger ale"],
-    ["coke", "coffee", "root beer"],
-    ["Sashimi", "Nigiri", "Maki sushi"],
-    ["Ramen", "Udon", "Soba"],
-    ["Milk", "Yogurt", "Cheese", "Ice Cream"]
-  ],
+  playerCount: 4,
+  wordbank: wordbank,
 })
 
 const getters = {
@@ -24,12 +21,18 @@ const getters = {
 
 const mutations = {
   addPlayer: (state) => {
-    state.players.push({id: state.nextPlayer, name: `Player ${state.nextPlayer}b`, word: "Apple", isImposter: false})
-    state.nextPlayer++;
+    if (state.players.length < 20) {
+      state.players.push({id: state.nextPlayer, name: `Player ${state.nextPlayer}`, word: null, isImposter: false, isAlive: true})
+      state.nextPlayer++;
+      state.playerCount++;
+    }
   },
   removePlayer: (state) => {
-    state.players.pop();
-    state.nextPlayer--;
+    if (state.players.length > 2) {
+      state.players.pop();
+      state.nextPlayer--;
+      state.playerCount--;
+    }
   },
   assignRandomWords: function (state) {
     const wordbanklength = state.wordbank.length - 1 ;
@@ -43,11 +46,28 @@ const mutations = {
     const randomWords = [state.wordbank[randomIndex][i1], state.wordbank[randomIndex][i2]];
     for (const player of state.players) {
       player.word = randomWords[0];
+      player.isImposter = false;
+      player.isAlive = true;
     }
     const imposterIndex = Math.floor(Math.random() * state.players.length)
     state.players[imposterIndex].word = randomWords[1];
     state.players[imposterIndex].isImposter = true;
   },
+  executePlayer: function (state, userID) {
+    for (const player of state.players) {
+      if (player.id === userID) {
+        player.isAlive = false;
+        state.playerCount--;
+        if (player.isImposter) {
+          router.push("/gameends")
+        } else if (state.playerCount == 2) {
+          router.push("imposterwins")
+        } else {
+          router.push("/gamecontinues")
+        }
+      }
+    }
+  }
   // selectRandomName: function (state) {
   //   const randomIndex = Math.floor(Math.random() * state.players.length)
   //   return state.players[randomIndex].name;

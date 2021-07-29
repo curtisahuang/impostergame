@@ -14,7 +14,7 @@ export default {
 
 <style>
 button {
-  padding: 30px;
+  padding: 20px;
   border: none;
 }
 </style>

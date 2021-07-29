@@ -1,5 +1,5 @@
 <template>
-  <div @click="myFilter">
+  <div @click="myFilter" id="player-words">
   {{player.name}}
   <div v-if="isActive">{{player.word}}</div>
   </div>
@@ -23,5 +23,10 @@ export default {
 </script>
 
 <style>
-
+#player-words {
+  height: 200px;
+  width: 300px;
+  background-color: pink;
+  border: none;
+}
 </style>
