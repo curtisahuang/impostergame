@@ -17,4 +17,7 @@ button {
   padding: 20px;
   border: none;
 }
+.next-button {
+  background-color: rgb(245, 167, 167);
+}
 </style>

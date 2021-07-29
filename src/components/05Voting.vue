@@ -4,7 +4,7 @@
     <p>Blindly accuse people! See who has shifty eyes!</p>
     <div v-for="player in players" v-bind:key="player.id">
       <span v-if="player.isAlive">
-        <button @click="executePlayer(player.id)">EXECUTE {{player.name}}!! {{player.word}}</button>
+        <button @click="executePlayer(player.id)">EXECUTE {{player.name}}!!</button>
       </span>
       <span v-else>
         {{player.name}} is dead 

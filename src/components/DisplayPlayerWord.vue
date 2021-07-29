@@ -16,7 +16,6 @@ export default {
   methods: {
     myFilter: function() {
       this.isActive = !this.isActive;
-      console.log("Toggles?")
     }
   }
 }

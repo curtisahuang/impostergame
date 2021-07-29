@@ -9,7 +9,7 @@
     </span>
     </div>
     <div>
-    <router-link to="/statements">Statement Round</router-link>
+    <router-link to="/statements"><button class="next-button">Statement Round</button></router-link>
     </div>
   </div>
 </template>

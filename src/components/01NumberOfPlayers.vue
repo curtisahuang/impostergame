@@ -11,7 +11,7 @@
           </span>
         </transition-group>
     </div>
-    <router-link to="/words">Get Your Words!</router-link>
+    <router-link to="/words"><button class="next-button">Get Your Words!</button></router-link>
   </div>
 </template>
 
