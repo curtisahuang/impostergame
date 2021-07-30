@@ -5,8 +5,8 @@
       <button class="player-change" v-on:click="removePlayer">Remove</button>
         <transition-group name="list" tag="p">
           <span v-for="player in players" v-bind:key="player.id" class="list-item">
-            <div>{{ player.name }} <input placeholder="Not Functioning Yet">
-            <button class="name-change-btn" v-on:click="changeName(player.id, testword)">Change name</button>
+            <div>{{ player.name }} <input placeholder="Insert your name!" v-model="test[player.id]">
+            <button class="name-change-btn" v-on:click="changePlayerName({id: player.id, newName: test[player.id]})">Change name</button>
             </div>
           </span>
         </transition-group>
@@ -22,8 +22,13 @@ export default {
   computed: mapState({
     players: state => state.players.players
   }),
+    data: function() {
+      return {
+        test: []
+    };
+},
   methods: {
-    ...mapMutations(['addPlayer', 'removePlayer']),
+    ...mapMutations(['addPlayer', 'removePlayer', 'changePlayerName']),
   }
 }
 </script>

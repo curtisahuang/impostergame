@@ -34,7 +34,15 @@ const mutations = {
       state.playerCount--;
     }
   },
+  changePlayerName: (state, {id, newName}) => {
+    for (const player of state.players) {
+      if (player.id === id) {
+        player.name = newName;
+      }
+    }
+  },
   assignRandomWords: function (state) {
+    console.log("words generated");
     const wordbanklength = state.wordbank.length - 1 ;
     let randomIndex = Math.floor(Math.random() * wordbanklength);
     const categorylength = state.wordbank[randomIndex].length - 1;
