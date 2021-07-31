@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>08 The Imposter has won! Well played Imposter!</p>
+    <p>The Imposter has won! Well played Imposter!</p>
     <router-link to="/words"><b-button class="next-button">Get new words!</b-button></router-link>
   </div>
 </template>
