@@ -13,7 +13,4 @@ export default {
 </script>
 
 <style>
-.next-button {
-  background-color: rgb(245, 167, 167);
-}
 </style>

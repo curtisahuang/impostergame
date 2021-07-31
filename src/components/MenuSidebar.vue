@@ -4,7 +4,6 @@
     <b-sidebar
       id="sidebar-backdrop"
       title="Menu"
-      :backdrop-variant="dark"
       backdrop
       shadow
     >

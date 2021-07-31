@@ -10,7 +10,7 @@ const state = () => ({
   ],
   nextPlayer: 5,
   playerCount: 4,
-  wordbank: wordbank,
+  wordbank
 })
 
 const getters = {
@@ -46,13 +46,7 @@ const mutations = {
     const wordbanklength = state.wordbank.length - 1 ;
     let randomIndex = Math.floor(Math.random() * wordbanklength);
     console.log({randomIndex})
-    const categorylength = state.wordbank[randomIndex].length - 1;
-    let i1 = Math.floor(Math.random() * categorylength);
-    let i2 = Math.floor(Math.random() * categorylength);
-    while (i1 === i2) {
-      i2 = Math.floor(Math.random() * categorylength);
-    }
-    const randomWords = [state.wordbank[randomIndex][i1], state.wordbank[randomIndex][i2]];
+    const randomWords = [state.wordbank[randomIndex][0], state.wordbank[randomIndex][1]];
     for (const player of state.players) {
       player.word = randomWords[0];
       player.isImposter = false;
