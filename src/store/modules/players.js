@@ -53,6 +53,7 @@ const mutations = {
     const imposterIndex = Math.floor(Math.random() * state.players.length)
     state.players[imposterIndex].word = randomWords[1];
     state.players[imposterIndex].isImposter = true;
+    state.playerCount = state.players.length;
   },
   executePlayer: function (state, userID) {
     for (const player of state.players) {
