@@ -1,15 +1,14 @@
 <template>
   <div>
   <h1>Welcome to the Imposter Game</h1>
-  <Sidebar />
+  <MenuSidebar />
   </div>
 </template>
 
 <script>
-import Sidebar from './Sidebar'
-
+import MenuSidebar from "./MenuSidebar.vue"
 export default {
-  components: { Sidebar },
+  components: { MenuSidebar },
 }
 </script>
 
