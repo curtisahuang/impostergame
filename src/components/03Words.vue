@@ -27,7 +27,10 @@ export default {
   }),
   methods: {
     ...mapMutations(["assignRandomWords"])
-  }
+  },
+  mounted() {
+    this.assignRandomWords()
+  },
 }
 </script>
 
