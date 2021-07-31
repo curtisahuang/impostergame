@@ -43,9 +43,15 @@ const mutations = {
     }
   },
   assignRandomWords: function (state) {
-    const wordbanklength = state.wordbank.length - 1 ;
+    const wordbanklength = state.wordbank.length;
     let randomIndex = Math.floor(Math.random() * wordbanklength);
-    const randomWords = [state.wordbank[randomIndex][0], state.wordbank[randomIndex][1]];
+    let randomAssign = Math.random();
+    let randomWords;
+    if (randomAssign < 0.5) {
+      randomWords = [state.wordbank[randomIndex][0], state.wordbank[randomIndex][1]];
+    } else {
+      randomWords = [state.wordbank[randomIndex][1], state.wordbank[randomIndex][0]];      
+    }
     for (const player of state.players) {
       player.word = randomWords[0];
       player.isOddball = false;
