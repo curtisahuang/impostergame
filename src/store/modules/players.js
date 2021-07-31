@@ -10,7 +10,8 @@ const state = () => ({
   ],
   nextPlayer: 5,
   playerCount: 4,
-  wordbank
+  wordbank,
+  imposter: null,
 })
 
 const getters = {
@@ -54,6 +55,7 @@ const mutations = {
     state.players[imposterIndex].word = randomWords[1];
     state.players[imposterIndex].isImposter = true;
     state.playerCount = state.players.length;
+    state.imposter = state.players[imposterIndex].name;
   },
   executePlayer: function (state, userID) {
     for (const player of state.players) {
