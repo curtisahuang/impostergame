@@ -1,14 +1,35 @@
 <template>
   <div>
-    <b-button v-b-toggle.sidebar-variant>Toggle Sidebar</b-button>
-    <b-sidebar id="sidebar-variant" title="Sidebar" bg-variant="dark" text-variant="light" shadow>
+    <b-button v-b-toggle.sidebar-backdrop>Menu</b-button>
+    <b-sidebar
+      id="sidebar-backdrop"
+      title="Menu"
+      :backdrop-variant="dark"
+      backdrop
+      shadow
+    >
       <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
+        <router-link to="/numberofplayers"><b-button>Start A New Game</b-button></router-link></div>
+      <div>
+        <b-form-select v-model="selected" :options="options"></b-form-select>      
       </div>
     </b-sidebar>
   </div>
 </template>
+
+<script>
+export default {
+    data() {
+      return {
+        selected: null,
+        options: [
+          { value: null, text: 'Japan' },
+          { value: null, text: 'Under Construction' },
+          { value: null, text: 'This doesn\'t do anything' },
+          { value: null, text: 'Another Region' },
+          { value: null, text: 'Do later' }
+        ]
+      }
+    }
+  }
+</script>

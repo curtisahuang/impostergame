@@ -2,14 +2,14 @@
   <div>
     <p>03 Word Round</p>
     <p>Each player can look at their word by pressing your name. Don't forget to hide it by pressing your name again before passing it to the next player! If someone doesn't know what their word is, don't be afraid to "re-roll" the words.</p>
-    <button @click="assignRandomWords">GENERATE WORDS</button>
+    <b-button @click="assignRandomWords" variant="light">GENERATE WORDS</b-button>
     <div>
     <span v-for="player in players" v-bind:key="player.id" class="list-item">
       <DisplayPlayerWord v-bind:player="player" />
     </span>
     </div>
     <div>
-    <router-link to="/statements"><button class="next-button">Statement Round</button></router-link>
+    <router-link to="/statements"><b-button variant="success" class="next-button">Statement Round</b-button></router-link>
     </div>
   </div>
 </template>

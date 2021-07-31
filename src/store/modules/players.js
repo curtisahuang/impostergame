@@ -45,6 +45,7 @@ const mutations = {
     console.log("words generated");
     const wordbanklength = state.wordbank.length - 1 ;
     let randomIndex = Math.floor(Math.random() * wordbanklength);
+    console.log({randomIndex})
     const categorylength = state.wordbank[randomIndex].length - 1;
     let i1 = Math.floor(Math.random() * categorylength);
     let i2 = Math.floor(Math.random() * categorylength);

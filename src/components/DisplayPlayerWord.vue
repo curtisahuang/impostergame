@@ -1,7 +1,7 @@
 <template>
   <div @click="myFilter" id="player-words">
   {{player.name}}
-  <div v-if="isActive">{{player.word}}</div>
+  <div class="secret-word" v-if="isActive">{{player.word}}</div>
   </div>
 </template>
 
@@ -23,9 +23,14 @@ export default {
 
 <style>
 #player-words {
-  height: 200px;
-  width: 300px;
-  background-color: pink;
+  height: 100px;
+  width: 200px;
+  background-color: rgb(5, 9, 70);
   border: none;
+  border-radius: 10px;
+}
+#secret-word {
+  padding: 0px;
+  margin: 0px;
 }
 </style>

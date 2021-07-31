@@ -1,22 +1,19 @@
 <template>
   <div>
   <h1>Welcome to the Imposter Game</h1>
-  <router-link to="/numberofplayers"><button>Start A New Game</button></router-link>
+  <sidebar />
   </div>
 </template>
 
 <script>
+import Sidebar from './Sidebar'
 
 export default {
-
+  components: { Sidebar },
 }
 </script>
 
 <style>
-button {
-  padding: 20px;
-  border: none;
-}
 .next-button {
   background-color: rgb(245, 167, 167);
 }

@@ -1,17 +1,17 @@
 <template>
   <div>
     <div id="list-demo">
-      <button class="player-change" @click="addPlayer">Add</button>
-      <button class="player-change" v-on:click="removePlayer">Remove</button>
+      <b-button class="player-change" @click="addPlayer">Add a player</b-button>
+      <b-button class="player-change" v-on:click="removePlayer">Remove a player</b-button>
         <transition-group name="list" tag="p">
           <span v-for="player in players" v-bind:key="player.id" class="list-item">
-            <div>{{ player.name }} <input placeholder="Insert your name!" v-model="test[player.id]">
-            <button class="name-change-btn" v-on:click="changePlayerName({id: player.id, newName: test[player.id]})">Change name</button>
+            <div>{{ player.name }} <input placeholder="Change your name!" v-model="test[player.id]">
+            <b-button variant="light" class="name-change-btn" v-on:click="changePlayerName({id: player.id, newName: test[player.id]})">Change name</b-button>
             </div>
           </span>
         </transition-group>
     </div>
-    <router-link to="/words"><button class="next-button">Get Your Words!</button></router-link>
+    <router-link to="/words"><b-button variant="success" class="next-button">Get your words!</b-button></router-link>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
 .list-enter-active, .list-leave-active {
   transition: all 1s;
 }
-.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+.list-enter, .list-leave-to {
   opacity: 0;
   transform: translateY(30px);
 }
@@ -52,5 +52,9 @@ export default {
 .player-change {
   padding: 5px 10px;
   margin: 10px;
+}
+div input {
+  margin-right: 5px;
+  line-height: 2.5em;
 }
 </style>

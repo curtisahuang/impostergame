@@ -27,12 +27,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #3a8ee2;
-  margin-top: 60px;
+  color: #fafafa;
+  background-color: rgb(73, 73, 151);
+  margin-top: 30px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 15px 5%;
+  height: 100%
+}
+button {
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
 }
 div {
-  border: 4px dotted blue;
-  margin: 25px;
-  padding: 25px;
+  margin: 5px;;
 }
 </style>
