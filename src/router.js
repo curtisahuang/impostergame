@@ -6,7 +6,7 @@ import Statements from "./components/04Statements";
 import Voting from "./components/05Voting";
 import GameContinues from "./components/06GameContinues";
 import GameEnds from "./components/07GameEnds";
-import ImposterWins from "./components/08ImposterWins";
+import OddballWins from "./components/08OddballWins";
 
 Vue.use(VueRouter);
 
@@ -42,9 +42,9 @@ export const routes = [
     component: GameEnds,
   },
   {
-    path: "/imposterwins",
-    name: "Imposter Wins",
-    component: ImposterWins,
+    path: "/oddballwins",
+    name: "Oddball Wins",
+    component: OddballWins,
   },
 ]
 

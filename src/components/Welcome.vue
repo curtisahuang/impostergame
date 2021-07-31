@@ -1,7 +1,7 @@
 <template>
   <div>
   <MenuSidebar />
-  <h1>Welcome to the Imposter Game</h1>
+  <h1>Welcome to the Oddball Game!</h1>
   </div>
 </template>
 

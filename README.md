@@ -1,4 +1,4 @@
-# impostergamevue2
+# oddballgame
 
 ## Project setup
 ```
