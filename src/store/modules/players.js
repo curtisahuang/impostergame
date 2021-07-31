@@ -42,10 +42,8 @@ const mutations = {
     }
   },
   assignRandomWords: function (state) {
-    console.log("words generated");
     const wordbanklength = state.wordbank.length - 1 ;
     let randomIndex = Math.floor(Math.random() * wordbanklength);
-    console.log({randomIndex})
     const randomWords = [state.wordbank[randomIndex][0], state.wordbank[randomIndex][1]];
     for (const player of state.players) {
       player.word = randomWords[0];
