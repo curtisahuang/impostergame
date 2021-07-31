@@ -1,9 +1,15 @@
 <template>
+
   <div id="app">
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
     <Welcome />
-          <transition name="fade" mode="out-in">
-    <router-view></router-view>
-          </transition>
+      <div class="content">
+      <transition name="custom-classes-transition"
+        enter-active-class="animated bounce"
+        leave-active-class="animated bounceOutRight" mode="out-in">
+        <router-view></router-view>
+      </transition>
+      </div>
   </div>
 </template>
 
@@ -19,8 +25,8 @@ export default {
 </script>
 
 <style>
-body {
-  background-color: rgb(255, 255, 255);
+html {
+  background-color: rgb(73, 73, 151);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -29,11 +35,10 @@ body {
   text-align: center;
   color: #fafafa;
   background-color: rgb(73, 73, 151);
-  margin-top: 30px;
+  margin-top: 2rem;
   margin-left: 0;
   margin-right: 0;
-  padding: 15px 5%;
-  height: 100%
+  padding: 1rem 5%;
 }
 button {
   padding: 20px;
@@ -43,5 +48,14 @@ button {
 }
 div {
   margin: 5px;;
+}
+.rout-view-leave-active, .rout-view-enter-active {
+  transition: all 1s;
+}
+.rout-view-enter, .rout-view-leave-to {
+  opacity: 0;
+}
+.content {
+  margin-top: 2rem;
 }
 </style>
