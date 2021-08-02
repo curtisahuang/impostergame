@@ -29,7 +29,7 @@ const mutations = {
     }
   },
   removePlayer: (state) => {
-    if (state.players.length > 2) {
+    if (state.players.length > 3) {
       state.players.pop();
       state.nextPlayer--;
       state.playerCount--;

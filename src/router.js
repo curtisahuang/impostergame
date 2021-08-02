@@ -7,10 +7,16 @@ import Voting from "./components/05Voting";
 import GameContinues from "./components/06GameContinues";
 import GameEnds from "./components/07GameEnds";
 import OddballWins from "./components/08OddballWins";
+import IntroPage from "./components/IntroPage";
 
 Vue.use(VueRouter);
 
 export const routes = [
+  {
+    path: "/",
+    name: "root",
+    component: IntroPage
+  },
   {
     path: "/numberofplayers",
     name: "Number Of Players",

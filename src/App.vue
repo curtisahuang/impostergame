@@ -1,14 +1,13 @@
 <template>
-
   <div id="app">
   <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
     <Welcome />
       <div class="content">
-      <transition name="custom-classes-transition"
-        enter-active-class="animated bounce"
-        leave-active-class="animated bounceOutRight" mode="out-in">
-        <router-view></router-view>
-      </transition>
+        <transition name="custom-classes-transition"
+          enter-active-class="animated fadeIn"
+          leave-active-class="animated bounceOutRight" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
   </div>
 </template>

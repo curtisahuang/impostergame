@@ -1,8 +1,8 @@
 <template>
   <div>
     <p>Word Round</p>
-    <p>Each player can look at their word by pressing your name. Don't forget to hide it by pressing your name again before passing it to the next player! If someone doesn't know what their word is, don't be afraid to "re-roll" the words.</p>
-    <b-button @click="assignRandomWords" variant="light">GENERATE WORDS</b-button>
+    <p>Each player can look at their word by clicking their name. Don't forget to hide it by pressing the name again before passing it to the next player! If someone doesn't know what their word is, don't be afraid to click "GENERATE NEW WORDS" again.</p>
+    <b-button @click="assignRandomWords" variant="light">GENERATE NEW WORDS</b-button>
     <div>
     <span v-for="player in players" v-bind:key="player.id" class="list-item">
       <DisplayPlayerWord v-bind:player="player" />

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>You killed an innocent member! The ODDBALL is still at large!</p>
+    <p>You killed an innocent member! The Oddball is still at large!</p>
     <router-link to="/statements"><b-button class="next-button">Back to Statement Round</b-button></router-link>
   </div>
 </template>

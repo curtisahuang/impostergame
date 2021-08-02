@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>The ODDBALL has won! Well played! {{oddball}} was the ODDBALL!</p>
+    <p>The Oddball has won! Well played! {{oddball}} was the Oddball!</p>
     <router-link to="/words"><b-button class="next-button">Get new words!</b-button></router-link>
   </div>
 </template>
