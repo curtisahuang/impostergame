@@ -1,6 +1,6 @@
 <template>
-  <div>Here the basic gameplay loop:
-    <ol class="rule-basics">
+  <div class="rulle-basics">Here the basic gameplay loop:
+    <ol class="rule-basics-list">
       <div class="spacer"></div>
       <li>Everyone is going to be given a word.</li>
       <li>One person's word is going to be different.</li>
@@ -26,6 +26,10 @@ export default {
   height: 1rem;
 }
 .rule-basics {
+  max-width: 400px;
+}
+
+.rule-basics-list {    
   line-height: 3rem;
 }
 </style>
