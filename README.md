@@ -15,7 +15,7 @@ Here the basic gameplay loop:
 
 Current wordbank is World-focused. US, UK, Japan, and Hong Kong wordbanks to be updated (hopefully with a database connected)
 
-If there are any unknown words to the players, hide all player words and generate new words.
+If there are any unknown words to the players, feel free to hide all player words and generate new words.
 
 Have fun!
 
