@@ -11,7 +11,7 @@
       <li>The group wins if they can identify the oddball.</li>
       <li>Have fun!</li>
     </ol>
-    <router-link to="/numberofplayers"><b-button>Start A New Game</b-button></router-link>
+    <router-link to="/numberofplayers"><b-button variant="success">Start A New Game</b-button></router-link>
   </div>
 </template>
 
