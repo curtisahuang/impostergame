@@ -26,7 +26,7 @@ export default {
   height: 1rem;
 }
 .rule-basics {
-  max-width: 400px;
+  max-width: 450px;
   margin: auto;
 }
 

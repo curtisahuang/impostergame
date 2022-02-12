@@ -2,8 +2,8 @@
   <div @click="myFilter" id="player-words">
   {{player.name}}
   <div class="word-div">
-    <span v-if="isActive">{{player.word}}</span>
-    <span v-else>Reveal Word</span>
+    <span v-if="isActive"><strong>{{player.word}}</strong> <br>Click again to hide</span>
+    <span v-else>Reveal My Secret Word</span>
   </div>
   </div>
 </template>

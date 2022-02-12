@@ -5,7 +5,7 @@
       <b-button class="player-change" v-on:click="removePlayer">Remove a player</b-button>
         <transition-group name="list" tag="p">
           <span v-for="player in players" v-bind:key="player.id" class="list-item">
-            <div>{{ player.name }} <input placeholder="Change your name!" v-model="test[player.id]">
+            <div>{{ player.name }} <input placeholder="Type your name here!" v-model="test[player.id]">
             <b-button variant="light" class="name-change-btn" v-on:click="changePlayerName({id: player.id, newName: test[player.id]})">Change name</b-button>
             </div>
           </span>
@@ -35,7 +35,6 @@ export default {
 
 <style>
 .list-item {
-  display: inline-block;
   margin-right: 10px;
 }
 .list-enter-active, .list-leave-active {
