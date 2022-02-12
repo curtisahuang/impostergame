@@ -1,5 +1,5 @@
 <template>
-  <div class="rulle-basics">Here the basic gameplay loop:
+  <div class="rule-basics">Here the basic gameplay loop:
     <ol class="rule-basics-list">
       <div class="spacer"></div>
       <li>Everyone is going to be given a word.</li>
@@ -27,9 +27,11 @@ export default {
 }
 .rule-basics {
   max-width: 400px;
+  margin: auto;
 }
 
 .rule-basics-list {    
   line-height: 3rem;
+  text-align: left;
 }
 </style>
