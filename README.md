@@ -13,11 +13,13 @@ Here the basic gameplay loop:
     The group wins if they can identify the oddball.
     Have fun!
 
-Current wordbank is Japan-focused. US, UK, and Hong Kong wordbanks to be updated.
+Current wordbank is World-focused. US, UK, Japan, and Hong Kong wordbanks to be updated (hopefully with a database connected)
 
 If there are any unknown words to the players, hide all player words and generate new words.
 
 Have fun!
+
+PS Don't peak at the words. It hasn't been hidden yet!
 
 ## Project setup
 ```
